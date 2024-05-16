@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1350.0" prefWidth="871.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GoldenStudio.Sign2ViewController">
+	<children>
+		<VBox alignment="TOP_CENTER" layoutX="226.0" layoutY="75.0" maxWidth="-Infinity" prefHeight="584.0" prefWidth="454.0" style="-fx-background-color: #111111; -fx-background-radius: 50;">
+			<children>
+      				<Pane prefHeight="98.0" prefWidth="454.0">
+      					<children>
+      						<Label layoutX="21.0" layoutY="30.0" text="Informations" textFill="WHITE">
+      							<font>
+      								<Font size="17.0" />
+      							</font>
+      						</Label>
+      					</children>
+      				</Pane>
+				<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+					<children>
+						<Pane prefHeight="50.0" prefWidth="11.0" />
+						<Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="112.0" text="Birth Date ">
+							<font>
+								<Font name="Arial" size="17.0" />
+							</font>
+						</Label>
+						<Pane prefHeight="50.0" prefWidth="10.0" />
+						<DatePicker fx:id="dateBirth" prefHeight="35.0" prefWidth="201.0" style="-fx-background-color: transparent;" />
+					</children>
+				</HBox>
+				<Pane prefHeight="40.0" prefWidth="454.0">
+               <children>
+                  <Label fx:id="dateerror" layoutX="62.0" prefHeight="9.0" prefWidth="330.0" textFill="#860000">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+				<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+					<children>
+						<Pane prefHeight="50.0" prefWidth="11.0" />
+						<Label prefHeight="27.0" prefWidth="112.0" text="Country ">
+							<font>
+								<Font name="Arial" size="17.0" />
+							</font>
+						</Label>
+						<ChoiceBox fx:id="Country" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: transparent;" />
+						<Pane prefHeight="50.0" prefWidth="10.0" />
+						<FontAwesomeIconView glyphName="FLAG" size="30" wrappingWidth="30.0" />
+					</children>
+				</HBox>
+				<Pane prefHeight="40.0" prefWidth="454.0" />
+				<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+					<children>
+						<Pane prefHeight="50.0" prefWidth="11.0" />
+						<Label prefHeight="27.0" prefWidth="112.0" text="Account Type ">
+							<font>
+								<Font name="Arial" size="15.0" />
+							</font>
+						</Label>
+						<ChoiceBox fx:id="AccountType" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: transparent;" />
+						<Pane prefHeight="50.0" prefWidth="10.0" />
+						<FontAwesomeIconView glyphName="USER" size="30" wrappingWidth="30.0" />
+					</children>
+				</HBox>
+				<Pane prefHeight="40.0" prefWidth="454.0" />
+				<HBox alignment="CENTER" prefHeight="70.0" prefWidth="454.0">
+					<children>
+						<Button fx:id="create" mnemonicParsing="false" onAction="#switchToHome" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #888888; -fx-background-radius: 50;" text="Create" />
+					</children>
+				</HBox>
+				<Pane prefHeight="33.0" prefWidth="454.0" />
+				<ImageView fitHeight="82.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@imageSource/logo.png" />
+					</image>
+				</ImageView>
+			</children>
+		</VBox>
+	</children>
+</VBox>

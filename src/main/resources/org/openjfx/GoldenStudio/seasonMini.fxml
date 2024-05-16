@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="201.0" prefWidth="136.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GoldenStudio.SeasonMiniController">
+   <children>
+      <ImageView fx:id="poster" fitHeight="211.0" fitWidth="136.0" onMouseClicked="#switchToInfo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imageSource/joker.jpg" />
+         </image>
+      </ImageView>
+      <Circle fill="#c7cc30" layoutX="25.0" layoutY="25.0" onMouseClicked="#switchToInfo" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="numSeasonEp" alignment="CENTER" layoutX="3.0" layoutY="-7.0" onMouseClicked="#switchToInfo" prefHeight="64.0" prefWidth="43.0" text="1" textFill="#565656">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

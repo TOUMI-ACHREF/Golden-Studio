@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1307.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GoldenStudio.ProducerSeriesController">
+   <left>
+      <VBox prefHeight="750.0" prefWidth="286.0" style="-fx-background-color: #2a2a2b;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="25.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToHome" prefHeight="55.0" prefWidth="214.0">
+               <children>
+                  <Pane onMouseClicked="#switchToHome" prefHeight="55.0" prefWidth="18.0" />
+                  <FontAwesomeIconView fill="#757575" glyphName="HOME" onMouseClicked="#switchToHome" selectionFill="BLACK" size="50" />
+                  <Pane prefHeight="55.0" prefWidth="12.0" />
+                  <Label onMouseClicked="#switchToHome" prefHeight="32.0" prefWidth="90.0" text="Home" textFill="#757575" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="12.0" prefWidth="286.0" />
+            <Pane prefHeight="12.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT"  prefHeight="55.0" prefWidth="200.0" style="-fx-border-color: #ffffff; -fx-border-width: 0 0 0 4;">
+               <children>
+                  <Pane  prefHeight="55.0" prefWidth="26.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILM"  selectionFill="BLACK" size="40" />
+                  <Pane  prefHeight="55.0" prefWidth="12.0" />
+                  <Label  prefHeight="32.0" prefWidth="124.0" text="My Media" textFill="WHITE" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="434.0" prefWidth="286.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="286.0">
+                     <children>
+                        <Pane prefHeight="67.0" prefWidth="33.0" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" onMouseClicked="#logOut" size="35" />
+                        <Pane prefHeight="67.0" prefWidth="46.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox  prefHeight="710.0" prefWidth="937.0" style="-fx-background-color: #1e1e20;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView prefHeight="489.0" prefWidth="1021.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="452.7999938726425" text="Media" />
+                <TableColumn prefWidth="397.5999450683594" text="Media Name" />
+                  <TableColumn prefWidth="169.60004882812495" text="Action" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="89.0" prefWidth="1307.0" style="-fx-background-color: #2a2a2b;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="14.0" />
+            <ImageView fitHeight="89.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imageSource/name-no-logo.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="90.0" prefWidth="458.0" HBox.hgrow="ALWAYS" />
+            <Pane prefHeight="90.0" prefWidth="95.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="BELL" size="40" />
+            <Pane prefHeight="90.0" prefWidth="32.0" />
+            <FontAwesomeIconView fx:id="account" fill="WHITE" glyphName="USER" onMouseClicked="#switchToAccount" size="40" />
+            <Pane prefHeight="90.0" prefWidth="32.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>

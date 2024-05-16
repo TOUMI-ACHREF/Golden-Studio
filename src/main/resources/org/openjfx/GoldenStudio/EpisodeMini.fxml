@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="201.0" prefWidth="136.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GoldenStudio.EpisodeMiniController">
+   <children>
+      <ImageView fx:id="poster" fitHeight="211.0" fitWidth="136.0" onMouseClicked="#switchToEpisode" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imageSource/joker.jpg" />
+         </image>
+      </ImageView>
+      <Circle fill="#c7cc30" layoutX="24.0" layoutY="22.0" onMouseClicked="#switchToEpisode" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="numEp" alignment="CENTER" layoutX="2.0" layoutY="-10.0" onMouseClicked="#switchToEpisode" prefHeight="64.0" prefWidth="43.0" text="1" textFill="#565656">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#c7cc30" glyphName="PLAY" layoutX="48.0" layoutY="115.0" onMouseClicked="#switchToEpisode" size="40" />
+   </children>
+</AnchorPane>

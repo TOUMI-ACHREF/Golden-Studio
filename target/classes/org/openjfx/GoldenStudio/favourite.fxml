@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1307.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GoldenStudio.FavouriteViewController">
+   <left>
+      <VBox prefHeight="750.0" prefWidth="286.0" style="-fx-background-color: #2a2a2b;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="25.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToHome" prefHeight="55.0" prefWidth="214.0">
+               <children>
+                  <Pane onMouseClicked="#switchToHome" prefHeight="55.0" prefWidth="18.0" />
+                  <FontAwesomeIconView fill="#757575" glyphName="HOME" onMouseClicked="#switchToHome" selectionFill="BLACK" size="50" />
+                  <Pane onMouseClicked="#switchToHome" prefHeight="55.0" prefWidth="12.0" />
+                  <Label onMouseClicked="#switchToHome" prefHeight="32.0" prefWidth="90.0" text="Home" textFill="#757575" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="12.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToMovie" prefHeight="55.0" prefWidth="214.0">
+               <children>
+                  <Pane onMouseClicked="#switchToMovie" prefHeight="55.0" prefWidth="24.0" />
+                  <FontAwesomeIconView fill="#757575" glyphName="FILM" onMouseClicked="#switchToMovie" selectionFill="BLACK" size="40" />
+                  <Pane onMouseClicked="#switchToMovie" prefHeight="55.0" prefWidth="12.0" />
+                  <Label onMouseClicked="#switchToMovie" prefHeight="32.0" prefWidth="107.0" text="Movies" textFill="#757575" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="12.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToSerie" prefHeight="55.0" prefWidth="214.0">
+               <children>
+                  <Pane onMouseClicked="#switchToSerie" prefHeight="55.0" prefWidth="24.0" />
+                  <FontAwesomeIconView fill="#757575" glyphName="FILM" onMouseClicked="#switchToSerie" selectionFill="BLACK" size="40" />
+                  <Pane onMouseClicked="#switchToSerie" prefHeight="55.0" prefWidth="12.0" />
+                  <Label onMouseClicked="#switchToSerie" prefHeight="32.0" prefWidth="107.0" text="Series" textFill="#757575" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="12.0" prefWidth="286.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="200.0" style="-fx-border-width: 0 0 0 4; -fx-border-color: #FFFFFF;">
+               <children>
+                  <Pane prefHeight="55.0" prefWidth="26.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="HEART" selectionFill="BLACK" size="40" />
+                  <Pane prefHeight="55.0" prefWidth="12.0" />
+                  <Label prefHeight="32.0" prefWidth="139.0" text="Favourites" textFill="WHITE" translateX="6.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="434.0" prefWidth="286.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="286.0">
+                     <children>
+                        <Pane prefHeight="67.0" prefWidth="33.0" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" onMouseClicked="#logOut" size="35" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="710.0" prefWidth="937.0" style="-fx-background-color: #1e1e20;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="45.0" prefWidth="1021.0" />
+            <ScrollPane prefHeight="665.0" prefWidth="1074.0" style="-fx-background-color: transparent;" stylesheets="@styles/style.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="moviesContainer">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children></VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="89.0" prefWidth="1307.0" style="-fx-background-color: #2a2a2b;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="14.0" />
+            <ImageView fitHeight="89.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imageSource/name-no-logo.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="90.0" prefWidth="458.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="293.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;">
+               <children>
+                  <Pane prefHeight="46.0" prefWidth="9.0" />
+                  <FontAwesomeIconView glyphName="SEARCH" size="30" />
+                  <Pane prefHeight="46.0" prefWidth="10.0" />
+                  <TextField prefHeight="26.0" prefWidth="230.0" promptText="Search" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Pane prefHeight="90.0" prefWidth="95.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="BELL" size="40" />
+            <Pane prefHeight="90.0" prefWidth="32.0" />
+            <FontAwesomeIconView fx:id="account" fill="WHITE" glyphName="USER" onMouseClicked="#switchToAccount" size="40" />
+            <Pane prefHeight="90.0" prefWidth="32.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>
